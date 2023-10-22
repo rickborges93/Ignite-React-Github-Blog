@@ -1,7 +1,12 @@
+import { UserCard } from './components/UserCard'
+import { HomeContainer, HomeContent } from './styles'
+
 export function Home() {
   return (
-    <>
-      <h1>PÁGINA HOME</h1>
-    </>
+    <HomeContainer>
+      <HomeContent>
+        <UserCard />
+      </HomeContent>
+    </HomeContainer>
   )
 }
