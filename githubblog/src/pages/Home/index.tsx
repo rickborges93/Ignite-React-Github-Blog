@@ -3,11 +3,13 @@ import { UserCard } from './components/UserCard'
 import {
   HomeContainer,
   HomeContent,
+  PostsContainer,
   SearchContent,
   SearchInput,
   SearchStatus,
 } from './styles'
 import { api } from '../../lib/axios'
+import { PostPreview } from './components/PostPreview'
 
 interface Post {
   number: number
@@ -49,7 +51,7 @@ export function Home() {
         <UserCard />
         <SearchContent>
           <SearchStatus>
-            Publicações <span>{searchInput.length} publicações</span>
+            Publicações <span>{postsFiltered.length} publicações</span>
           </SearchStatus>
           <SearchInput
             placeholder="Buscar conteúdo"
@@ -57,15 +59,19 @@ export function Home() {
             onChange={setChangedInputValue}
           />
 
-          <ul>
+          <PostsContainer>
             {postsFiltered.map((post) => {
               return (
-                <li key={post.number}>
-                  [{post.number}] {post.title}
-                </li>
+                <PostPreview
+                  key={post.number}
+                  id={post.number}
+                  title={post.title}
+                  createdAt={post.created_at}
+                  body={post.body}
+                />
               )
             })}
-          </ul>
+          </PostsContainer>
         </SearchContent>
       </HomeContent>
     </HomeContainer>

@@ -52,3 +52,12 @@ export const SearchInput = styled.input`
     box-shadow: 0 0 0 0;
   }
 `
+
+export const PostsContainer = styled.div`
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+`
