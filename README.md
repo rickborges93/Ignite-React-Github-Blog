@@ -8,14 +8,12 @@ Rocketseat - Ignite ReactJS - Desafio 03 - Github Blog
    - Vite
      - React w/ TypeScript
    - styled-components
-   - react-hook-form
-   - zod
+   - react-markdown
    - react-router-dom
  
 ### ✔ You can:
-  - Add and remove of products in the Cart
-  - Change quantity of products in the Cart
-  - Fill the form to finish the buy
+  - Filter posts (issues)
+  - Read the full post
 
 ### 🚀 Run the project
 
@@ -33,7 +31,7 @@ $ npm
 # Run the project
 $ npm run dev
 ```
-Now, the app will be avaiable at the browser in the address http://localhost:3000
+Now, the app will be avaiable at the browser in the address http://localhost:5173
 
 👉 Visit my linkedin: [Henrique Borges](https://www.linkedin.com/in/henrique-samensari-borges-6aa553174/) 
 
